@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# EduHub-CSE3-1-FinalProject
+"EduHub is a web-based academic portal (Final Project – CSE 3rd Year 1st Semester) built with HTML, CSS, Bootstrap, and JavaScript. It provides students with features like login, registration, syllabus, courses, dashboard, file upload, assignments, notes, and profile management."
+>>>>>>> 831a2b0ed81d24cfc9d7b34088f5950ea0319196
