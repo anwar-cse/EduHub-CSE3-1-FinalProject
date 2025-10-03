@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import RequireAuth from "./components/RequireAuth";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <Route path="/assignments" element={<Assignments />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/upload" element={<Upload />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

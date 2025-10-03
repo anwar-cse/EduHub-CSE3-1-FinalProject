@@ -1,22 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const auth = useAuth();
+
+  const from = location.state?.from?.pathname || "/dashboard";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8080/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-
-    if (response.ok) {
-      alert("✅ Login successful!");
-    } else {
-      alert("❌ Invalid email or password");
+    try {
+      // If you have a backend, replace with API call
+      // await fetch('http://localhost:8080/api/auth/login', ...)
+      await auth.login({ email, password });
+      navigate(from, { replace: true });
+    } catch (err) {
+      alert("Login failed: " + err.message);
     }
   };
 
